@@ -48,11 +48,11 @@ while True:
         os.system('cls') or None
         print("---------------------------------------------------------------------\nPERÍODO DE LOCAÇÃO\n---------------------------------------------------------------------\n")
         print('Veículo {} Selecionado. O valor da diária para aluguel do carro é de R$ {}.'.format(portfolio_disponivel[escolha_carro_disponivel],(portfolio_disponivel[escolha_carro_disponivel].split(' '))[4]))
-        dias_alugado = input('Você gostaria de alugar por quantos dias? ')
+        dias_alugado = input('Você gostaria de alugar por quantos dias? \n')
         valor_aluguel = int((portfolio_disponivel[escolha_carro_disponivel].split(' '))[4])*int(dias_alugado)
         os.system('cls') or None
         print("---------------------------------------------------------------------\nCONFIRMAÇÃO DE LOCAÇÃO\n---------------------------------------------------------------------\n")
-        escolha_confirmacao = input('\nO valor do aluguel será de R$ {}. Deseja continuar? \n(Tecle X para Cancelar e Enter. Para continuar pressione qualquer tecla e pressione Enter. )\n'.format(valor_aluguel))
+        escolha_confirmacao = input('O valor do aluguel será de R$ {}. Deseja continuar? \n(Tecle X para Cancelar e Enter. Para continuar pressione qualquer tecla e pressione Enter. )\n'.format(valor_aluguel))
         if escolha_confirmacao == 'X' or escolha_confirmacao == 'x':
             continue
         else:
@@ -64,10 +64,10 @@ while True:
         print('Selecione o veículo a ser devolvido: \n')
         for i in portfolio_alugado:
             print('{} - {}'.format(portfolio_alugado.index(i),i))
-        escolha_carro_devolucao = int(input('Digite o código do carro que você deseja devolver: '))
+        escolha_carro_devolucao = int(input('\nDigite o código do carro que você deseja devolver: '))
         os.system('cls') or None
         print("---------------------------------------------------------------------\nCONFIRMAÇÃO DE DEVOLUÇÃO\n---------------------------------------------------------------------\n")
-        print('Veículo {} Selecionado. Deseja continuar com a devolução? (Aperte X e Enter para Cancelar. Para constinuar, pressione qualquer tecla) \n'.format(portfolio_alugado[escolha_carro_devolucao]))              
+        print('Veículo {} Selecionado. Deseja continuar com a devolução? \n(Aperte X e Enter para Cancelar. Para continuar, pressione qualquer tecla) \n'.format(portfolio_alugado[escolha_carro_devolucao]))              
         opcao2 = input()
         if opcao2 == 'x' or opcao2 == 'X':
             continue
@@ -80,8 +80,7 @@ while True:
       
         break
 
-print('----------------------------------------------------------------\nVocê utilizou o programa Software de Gestão de Locação de Veículos\n----------------------------------------------------------------\n')
-tm.sleep(2)
-print('Este programa foi desenvolvido por Andrio Homrich.\nVersão 1.0 lançada em 16.11.2022\n\n----------------------------------------------------------------\nVolte Sempre!\n----------------------------------------------------------------\n')
+print('------------------------------------------------------------------\nVocê utilizou o programa Software de Gestão de Locação de Veículos\n------------------------------------------------------------------\n')
+print('Este programa foi desenvolvido por Andrio Homrich.\nVersão 1.1 lançada em 17.11.2022\n\n------------------------------------------------------------------\nVolte Sempre!\n------------------------------------------------------------------\n')
 tm.sleep(2)      
 sys.exit()
